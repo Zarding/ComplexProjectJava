@@ -54,4 +54,9 @@ public class PlanServiceImpl implements PlanService {
             typeServicesPlanRepository.save(tsp0);
         }
     }
+
+    @Override
+    public void AddTypeServicesPlan(TypeServicesPlan tsp) {
+        typeServicesPlanRepository.save(tsp);
+    }
 }

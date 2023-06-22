@@ -31,4 +31,9 @@ public class ReferenceController {
     public void saveReference(@RequestBody Reference reference){
         referenceService.AddReference(reference);
     }
+
+    @PostMapping(value="/delreference")
+    public void delReference(@RequestBody Reference reference){
+        referenceService.DelReference(reference);
+    }
 }

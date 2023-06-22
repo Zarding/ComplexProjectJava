@@ -36,6 +36,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public List<User> getWorkerList(Integer id) {
+        return userRepository.findWorkersByClientId(id);
+    }
+
+    @Override
     public void AddUserClient(UserClient userClient) {
         this.userClientRepository.save(userClient);
     }

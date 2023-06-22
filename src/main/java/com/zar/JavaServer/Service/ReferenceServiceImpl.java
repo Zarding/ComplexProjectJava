@@ -42,4 +42,9 @@ public class ReferenceServiceImpl implements ReferenceService{
             System.out.println(e.getMessage());
         }
     }
+
+    @Override
+    public void DelReference(Reference reference) {
+        referenceRepository.delete(reference);
+    }
 }

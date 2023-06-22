@@ -7,6 +7,8 @@ import org.springframework.data.repository.CrudRepository;
 import java.util.List;
 
 public interface UserClientRepository extends CrudRepository<UserClient,Long> {
+    @Query("select u from UserClient u where u.idUser.id = ?1")
+    List<UserClient> findClientsByUserId(Short id);
     @Query("select u from UserClient u where u.idClient.id = ?1")
     List<UserClient> findUsersByClientId(Integer id);
 }

@@ -10,4 +10,5 @@ public interface DocumentService {
 
     List<Document> getDocumentsByClientId(Integer id);
     boolean AddDocument(Document doc);
+    void DelDocument(Document doc);
 }

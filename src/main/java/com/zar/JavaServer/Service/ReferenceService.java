@@ -12,4 +12,5 @@ public interface ReferenceService {
     List<TypeReference> getAllTypeReferences();
 
     void AddReference(Reference reference);
+    void DelReference(Reference reference);
 }

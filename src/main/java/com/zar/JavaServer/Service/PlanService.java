@@ -12,4 +12,5 @@ public interface PlanService {
     List<TypeServicesPlan> getTypeServicesPlansByPlanId(Integer id);
 
     void AddPlan(List<TypeServicesPlan> tsp);
+    void AddTypeServicesPlan(TypeServicesPlan tsp);
 }

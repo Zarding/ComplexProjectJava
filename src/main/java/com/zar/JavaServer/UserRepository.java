@@ -11,6 +11,8 @@ import javax.persistence.Id;
 import java.util.List;
 
 public interface UserRepository extends CrudRepository<User,Long> {
+    @Query("select u from User u inner join u.userClients userClients where userClients.idClient.id = ?1")
+    List<User> findWorkersByClientId(Integer id);
     @Query("select u from User u where u.idRole.name = ?1")
     List<User> findWorkers(String name);
 

@@ -10,6 +10,8 @@ import org.springframework.data.repository.CrudRepository;
 import java.util.List;
 
 public interface CalendarRepository extends CrudRepository<TypeServicesPlan,Long> {
+    @Query("select t from TypeServicesPlan t where t.idUser.id = ?1 and t.status = ?2")
+    List<TypeServicesPlan> findCalendarServicesByUser(Short id, String status);
     @Query("select t from TypeServicesPlan t where t.idUser.id = ?1 order by t.dateComplete")
     List<TypeServicesPlan> findCalendarServicesByUserId(Short id);
 

@@ -46,4 +46,9 @@ public class PlanController {
     public void addPlan(@RequestBody List<TypeServicesPlan> tsp){
         this.planService.AddPlan(tsp);
     }
+
+    @PostMapping(value="/addtypeservicesplan")
+    public void addTypeServicesPlan(@RequestBody TypeServicesPlan tsp){
+        this.planService.AddTypeServicesPlan(tsp);
+    }
 }

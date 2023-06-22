@@ -35,7 +35,12 @@ public class ClientServiceImpl implements ClientService {
 
     @Override
     public List<Client> getClientsListByUserId(short id) {
-        return clientRepository.findClientsByUserId(id);
+        List<UserClient> uc = userClientRepository.findClientsByUserId(id);
+        List<Client> clients = new ArrayList<Client>();
+        for (UserClient uc1 : uc) {
+            clients.add(uc1.getIdClient());
+        }
+        return clients;
     }
 
     @Override

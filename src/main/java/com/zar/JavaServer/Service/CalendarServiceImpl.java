@@ -18,7 +18,7 @@ public class CalendarServiceImpl implements CalendarService{
 
     @Override
     public List<TypeServicesPlan> getCalendarServicesByUserId(short id) {
-        System.out.println(calendarRepository.findCalendarServicesByUserId(id).get(0).getIdServices().getName());
-        return calendarRepository.findCalendarServicesByUserId(id);
+        return calendarRepository.findCalendarServicesByUser(id, "Новый");
+        //return calendarRepository.findCalendarServicesByUserId(id);
     }
 }

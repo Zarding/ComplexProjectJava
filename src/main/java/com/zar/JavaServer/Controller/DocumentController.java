@@ -32,7 +32,11 @@ public class DocumentController {
 
     @PostMapping(value="/adddocument")
     public boolean saveDoc(@RequestBody Document document){
-        System.out.println(document.getNumber());
         return documentService.AddDocument(document);
+    }
+
+    @PostMapping(value="/deldocument")
+    public void delDoc(@RequestBody Document document){
+        documentService.DelDocument(document);
     }
 }

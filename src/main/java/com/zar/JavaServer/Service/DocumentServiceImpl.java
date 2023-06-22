@@ -44,4 +44,9 @@ public class DocumentServiceImpl implements DocumentService{
         }
         return false;
     }
+
+    @Override
+    public void DelDocument(Document doc) {
+        documentRepository.delete(doc);
+    }
 }

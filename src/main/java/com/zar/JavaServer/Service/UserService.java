@@ -14,6 +14,7 @@ public interface UserService {
     User getUserById(short id);
 
     List<User> getWorkerList();
+    List<User> getWorkerList(Integer id);
 
     void AddUserClient(UserClient userClient);
 
